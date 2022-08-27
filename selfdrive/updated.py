@@ -57,8 +57,12 @@ OVERLAY_MERGED = os.path.join(STAGING_ROOT, "merged")
 FINALIZED = os.path.join(STAGING_ROOT, "finalized")
 
 REBOOT_ON_UPDATE = opParams().get('update_behavior').lower().strip() == 'auto'  # if not auto, has to be alert
-DAYS_NO_CONNECTIVITY_MAX = 14     # do not allow to engage after this many days
-DAYS_NO_CONNECTIVITY_PROMPT = 10  # send an offroad prompt after this many days
+#DAYS_NO_CONNECTIVITY_MAX = 14     # do not allow to engage after this many days
+#DAYS_NO_CONNECTIVITY_PROMPT = 10  # send an offroad prompt after this many days
+
+# sconway - overrides since we're not getting any more updates!
+DAYS_NO_CONNECTIVITY_MAX = 9999
+DAYS_NO_CONNECTIVITY_PROMPT = 9999
 
 class WaitTimeHelper:
   def __init__(self, proc):
